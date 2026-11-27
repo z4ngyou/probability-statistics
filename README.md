@@ -3,12 +3,13 @@
 大学公開講義資料を参考に独自構成した、確率論・統計学の日本語学習教材です。
 
 ## 閲覧
-GitHub Pages 公開後は、サイトのトップページから全22章、演習、解答、参考文献を閲覧できます。
+公開URL: https://z4ngyou.github.io/probability-statistics/
+
+サイトのトップページから全22章、演習、解答、参考文献を閲覧できます。
 
 ## ファイル構成
 - `index.html`: 学習サイト本体。Markdownを読み込み、数式をMathJaxで表示します。
 - `style.css`: サイトのレイアウトと表示設定。
-- `probability_statistics_v2.md`: 増補第2版の統合Markdown原稿（ダウンロード用）。
 - `probability_statistics_v2.md`: サイト表示・ダウンロードに使う唯一の本文原稿。これを更新するとサイトにも反映されます。
 - `.nojekyll`: GitHub PagesのJekyll処理を無効化します。
 
