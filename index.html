@@ -41,16 +41,14 @@
   </div>
 <script>
 window.addEventListener('DOMContentLoaded', async function () {
-  const files = Array.from({length: 6}, (_, i) => `./content/part-${String(i + 1).padStart(2, '0')}.md`);
   const status = document.getElementById('status');
   try {
-    const parts = await Promise.all(files.map(async (url) => {
-      const response = await fetch(url);
-      if (!response.ok) throw new Error(url + ' の読み込みに失敗しました (' + response.status + ')');
-      return response.text();
-    }));
+    const response = await fetch('./probability_statistics_v2.md');
+    if (!response.ok) throw new Error('Markdown原稿の読み込みに失敗しました (' + response.status + ')');
+    let markdown = await response.text();
+    markdown = markdown.replace(/^---\\s*\\n[\\s\\S]*?\\n---\\s*\\n/, '');
     const md = window.markdownit({html: false, linkify: true, typographer: true});
-    document.getElementById('content').innerHTML = md.render(parts.join('\n\n'));
+    document.getElementById('content').innerHTML = md.render(markdown);
     status.remove();
     const headings = [...document.querySelectorAll('#content h1, #content h2, #content h3')];
     const toc = document.getElementById('toc');
