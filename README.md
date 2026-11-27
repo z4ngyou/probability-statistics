@@ -8,7 +8,8 @@ GitHub Pages 公開後は、サイトのトップページから全22章、演�
 ## ファイル構成
 - `index.html`: 学習サイト本体。Markdownを読み込み、数式をMathJaxで表示します。
 - `style.css`: サイトのレイアウトと表示設定。
-- `content/part-01.md`〜`content/part-06.md`: 増補第2版のMarkdown本文（順番に連結して表示）。
+- `probability_statistics_v2.md`: 増補第2版の統合Markdown原稿（ダウンロード用）。
+- `content/part-01.md`〜`content/part-06.md`: サイト表示用に分割した同じ本文。
 - `.nojekyll`: GitHub PagesのJekyll処理を無効化します。
 
 ## GitHub Pages
