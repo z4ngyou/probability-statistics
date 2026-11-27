@@ -46,7 +46,7 @@ window.addEventListener('DOMContentLoaded', async function () {
     const response = await fetch('./probability_statistics_v2.md');
     if (!response.ok) throw new Error('Markdown原稿の読み込みに失敗しました (' + response.status + ')');
     let markdown = await response.text();
-    markdown = markdown.replace(/^---\\s*\\n[\\s\\S]*?\\n---\\s*\\n/, '');
+    markdown = markdown.replace(/^---\s*\n[\s\S]*?\n---\s*\n/, '');
     const md = window.markdownit({html: false, linkify: true, typographer: true});
     document.getElementById('content').innerHTML = md.render(markdown);
     status.remove();
