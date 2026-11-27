@@ -40,7 +40,7 @@
     </main>
   </div>
 <script>
-(async function () {
+window.addEventListener('DOMContentLoaded', async function () {
   const files = Array.from({length: 6}, (_, i) => `./content/part-${String(i + 1).padStart(2, '0')}.md`);
   const status = document.getElementById('status');
   try {
@@ -69,7 +69,7 @@
     status.className = 'status error';
     status.textContent = '教材を読み込めませんでした: ' + error.message;
   }
-})();
+});
 </script>
 </body>
 </html>
